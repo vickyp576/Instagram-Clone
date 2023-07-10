@@ -1,5 +1,4 @@
-# Instaclone
-Instaclone app https://instaclone-psi-five.vercel.app/
+# Instagram
 ## Description
 It is a simple photo and video sharing app. MERN Stack is used to bulid entire application. Cloudinary is used to upload image and video.
 ## Features
