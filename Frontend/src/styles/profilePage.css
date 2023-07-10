@@ -1,0 +1,470 @@
+.profilePage-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.profilePage-container header {
+    display: flex;
+    min-width: 400px;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid green;
+    padding: 20px;
+}
+
+.profilePage-container header .left-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15%;
+    position: relative;
+}
+
+.profilePage-container header .right-section {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.profilePage-container header .left-section .img-container#dp {
+    width: 70px;
+    height: 70px;
+    border: .5px solid green;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profilePage-container header .left-section h5 {
+    position: absolute;
+    bottom: 0;
+    left: 80px;
+    cursor: pointer;
+}
+
+.userPosts {
+    display: flex;
+    justify-content: center;
+    
+}
+/* ------------------------------- */
+
+.userPosts .post-grid-container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+}
+
+.each-post-container {
+    z-index: 15;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .6);
+    display: flex;
+    align-items: center;
+}
+
+.each-post-container .each-post {
+    position: relative;
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.each-post-container .each-post .arrow-icon-container,
+.each-post-container .each-post .cancel-icon-container {
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.each-post-container .each-post .arrow-icon-container:hover,
+.each-post-container .each-post .cancel-icon-container:hover {
+    background-color: #fff6f6;
+    color: gray;
+}
+
+.each-post-container .each-post .cancel-icon-container {
+    position: absolute;
+    top: 0;
+    right: 20px;
+}
+
+.userPosts .post-grid-container .post-img-container {
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    position: relative;
+}
+
+.userPosts .post-grid-container .post-img-container .likes-div {
+    position: absolute;
+    inset: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 22px;
+}
+
+.userPosts .post-grid-container .post-img-container:hover .likes-div {
+    display: flex;
+    background: rgba(0, 0, 0, .3);
+    cursor: pointer;
+}
+
+.userPosts .post-grid-container .post-img-container img,
+.userPosts .post-grid-container .post-img-container video {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+@media screen and (max-width : 600px) {
+    .profilePage-container header,
+    .userPosts .post-grid-container {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width : 600px) and (max-width : 800px) {
+    .profilePage-container header,
+    .userPosts .post-grid-container {
+        width: 90%;
+    }
+}
+
+@media screen and (min-width : 800px) and (max-width : 1000px) {
+    .profilePage-container header,
+    .userPosts .post-grid-container {
+        width: 80%;
+    }
+}
+
+@media screen and (min-width : 1000px) and (max-width : 1200px) {
+    .profilePage-container header,
+    .userPosts .post-grid-container {
+        width: 70%;
+    }
+}
+
+@media screen and (min-width : 1200px){
+    .profilePage-container header,
+    .userPosts .post-grid-container {
+        width: 60%;
+    }
+}
+
+
+/* ---------------------------- */
+.userPosts .posts-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 249px);
+    grid-column-gap: calc((100% - (5 * 249px)) / 4);
+}
+
+.post-container {
+    position: relative;
+}
+
+.post-container .more {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: white;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 0 2px gray;
+}
+
+.post-container .more .icon-container {
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.dp-form-container {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, .5);
+    background-position: fixed;
+}
+
+.dp-form-container .new-dp-form {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.dp-form-container .new-dp-form form {
+    width: 300px;
+    min-height: 150px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dp-form-container .new-dp-form .input-field {
+    border: 1px solid grey;
+    border-radius: 5px;
+    width: 70%;
+    height: 40px;
+    overflow: hidden;
+
+}
+
+.dp-form-container .new-dp-form .input-field input {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.dp-form-container .new-dp-form .input-field input::before {
+    content: "Select";
+    position: absolute;
+    background-color: ghostwhite;
+    height: 100%;
+    top: 0;
+    left: 0;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid gray;
+
+}
+
+.preview-container {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.preview-container #preview-img-container {
+    padding: 10px;
+    border: none;
+}
+
+.preview-container #preview-img-container img {
+    width: 100%;
+}
+
+.custom-file-input::-webkit-file-upload-button {
+    visibility: hidden;
+}
+
+.dp-form-container form .btn-container {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dp-form-container form .btn-container button {
+    outline: none;
+    background-color: green;
+    border: none;
+    border-radius: 5px;
+    width: 60%;
+    padding: 5px 20px;
+    font-size: 16px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.dp-form-container form .btn-container button:hover,
+.dp-form-container form .btn-container button:focus {
+    box-shadow: 0 0 10px green;
+}
+
+.dp-form-container form .btn-container button .loader {
+    display: inline-block;
+    height: 18px;
+    width: 18px;
+    border: 1px solid gray;
+    border-top: 1px solid white;
+    border-radius: 50%;
+    animation: authLoader 2s infinite linear;
+}
+
+@keyframes authLoader {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* new post card */
+
+.each-post-container .each-post .post-container {
+    margin-top: 15px;
+    width: 375px;
+    min-height: 250px;
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+    box-shadow: 1px 1px 4px gray;
+    background: white;
+  }
+  
+  .post-container .post-header {
+    width: 100%;
+    height: 40px;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .post-container .post-header .userDpAndName {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .post-container .post-header .userDpAndName .img-container#dp {
+    margin-right: 5px;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    border: .5px solid green;
+    overflow: hidden;
+  }
+  
+  .post-container .post-header p {
+    line-height: 10px;
+  }
+  
+  .post-container .post-header .img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 100%;
+    cursor: pointer;
+  }
+  
+  .post-container .post-header .img-container img {
+    width: 100%;
+  }
+  
+  .post-container .post-header p .name {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 3px;
+  }
+  
+  .post-container .post-header p .place {
+    font-size: 12px;
+    color: grey;
+  }
+  
+  .post-container .post-header p .dot {
+    font-size: 10px;
+    font-weight: bolder;
+  }
+  
+  .each-post-container .each-post .post-container .post-img {
+    background-color: gainsboro;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    max-height: 250px;
+    overflow: hidden;
+  }
+  
+  .each-post-container .each-post .post-container .post-img img {
+    height: 100%;
+    width: 100%;
+    object-fit: scale-down;
+  }
+
+  .each-post-container .each-post .post-container .post-img video {
+    max-height: 250px;
+  }
+  
+  .post-footer .like-share-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+  }
+  
+  .post-footer .like-share-container .like-share-button {
+    display: flex;
+  }
+  
+  .post-footer .like-share-container .img-container {
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+  }
+  
+  .post-footer .like-share-container .img-container img {
+    max-width: 100%;
+  }
+  
+  .post-footer .like-share-container .date {
+    font-size: 12px;
+    color: rgb(61, 61, 61);
+  }
+  
+  .post-footer .like {
+    font-size: 10px;
+    color: grey;
+    padding-left: 10px;
+  }
+  
+  .post-footer .description {
+    margin: 0;
+    font-size: 14px;
+    padding: 5px 10px 10px;
+    font-weight: bold;
+  }
+
+  @media screen and (max-width : 600px) {
+
+    .each-post-container .each-post .post-container {
+        width: 60%;
+      }
+  }

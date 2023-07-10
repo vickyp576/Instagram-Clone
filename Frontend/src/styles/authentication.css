@@ -1,0 +1,127 @@
+#form-container {
+    height: 100vh;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    margin: 5% 10% 5% 50%;
+     border : 5px solid rgba(201, 44, 228, 0.716); 
+    background-color: rgba(201, 44, 228, 0.716);
+    border-radius: 10%; 
+}
+
+#form-container form {
+    min-width: 300px;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+#form-container form h1 {
+    font-size: 100px;
+    padding: 20px;
+    margin-left: 5%;
+}
+
+#form-container form .field-container {
+     width: 140%; 
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+
+#form-container form .field-container input {
+     width: 60%;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 3%;
+    border : 1px solid rgba(201, 44, 228, 0.716); 
+    border-color: rgba(201, 44, 228, 0.716)
+}
+
+#form-container form .field-container label {
+    font-size: 25px;
+    padding: 10px;
+}
+
+#form-container form .field-container span {
+    position: absolute;
+    left: 10;
+   font-size: 60px;
+   padding: 0 10px;
+}
+
+#form-container form .btn-container {
+    padding: 0 10px;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#form-container form .btn-container p {
+    padding: 0 10px;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#form-container form .btn-container button {
+    background-color: green;
+    border: none;
+    border-radius: 5px;
+    width: 50%;
+    padding: 15px 10px;
+    font-size: 16px;
+    color: white;
+    margin-bottom: 15px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 10;
+    right: 50;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#form-container form .btn-container button:hover,
+#form-container form .btn-container button:focus {
+    box-shadow: 0 0 10px rgb(112, 254, 3);
+}
+
+.error {
+    display: inline-block;
+    position: absolute;
+    top: 40px;
+    left: 110px;
+    width: 100%;
+    color: black;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#form-container form .btn-container button .loader {
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+    border: 3px solid black;
+    border-top: 3px solid aqua;
+    border-radius: 50%;
+    animation: authLoader 2s infinite linear;
+}
+
+#signupbtn , #loginbtn  {
+    font-size: 36px;
+    text-decoration: none;
+    color: blue;
+    font-weight: 600;
+    margin-left: 5px;
+    font-weight: bolder;
+    padding-left: 10px;
+}
+
+@keyframes authLoader {
+    from {transform: rotate(0);}
+    to {transform: rotate(360deg);}
+}
