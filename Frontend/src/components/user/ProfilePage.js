@@ -42,6 +42,7 @@ export function ProfilePage() {
     
     return <>
         <div className="profilePage-container" >
+
             <header>
                 <section className="left-section">
                     <div className='img-container' id='dp'>
@@ -49,15 +50,15 @@ export function ProfilePage() {
                             <img src={user.profile_picture.url} alt="dp" /> :
                             <img src={`${DP}`} alt="dp" />}
                     </div>
-                    <h3>{user.name}</h3>
-                    <h5 onClick={() => setChangeDp(true)}>change_dp</h5>
+                    <h1>{user.name}</h1>
+                    <h5 onClick={() => setChangeDp(true)}>Edit_Profile</h5>
                 </section>
                 <section className="right-section">
-                    <h4>No Of Posts</h4>
-                    <h4>{userPosts.length}</h4>
+                    <h1>No. Of Posts</h1>
+                    <h3>{userPosts.length}</h3>
                 </section>
-
             </header>
+
             <div className="userPosts">
                 {loader ? <div className="post-loader" ></div> :
                     <div className="post-grid-container">
@@ -67,10 +68,8 @@ export function ProfilePage() {
                             })
                         }
                     </div>
-
                 }
             </div>
-
         </div>
 
         {

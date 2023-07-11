@@ -255,11 +255,13 @@
   margin-top: 60px;
   width: 80%;
   max-width: 500px;
-  padding: 40px 20px 20px;
+  padding: 60px;
   border-radius: 10px;
-  box-shadow: 3px 3px 10px 2px grey;
+  box-shadow: 3px 3px 10px 2px rgb(250, 3, 221);
   position: relative;
   overflow: hidden;
+  margin: 9% 0 0 40%;
+
 }
 
 #cancel {
@@ -276,7 +278,7 @@
   border-bottom-left-radius: 10px;
 }
 
-.new-post-form .row-1 input,
+
 .new-post-form .row-2 textarea {
   padding: 5px 10px;
   height: 30px;
@@ -285,6 +287,16 @@
   border-radius: 5px;
   font-weight: bold;
   font-size: 14px;
+}
+.new-post-form .row-1 input {
+  padding: 10 10px;
+  height: 30px;
+  border: 1px solid gray;
+  outline: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 14px;
+  width: 40%;
 }
 
 .new-post-form .row-2 textarea{
