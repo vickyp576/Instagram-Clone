@@ -3,6 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 5% 0 5% 40%;
 }
 
 .profilePage-container header {
@@ -11,7 +12,7 @@
     justify-content: center;
     align-items: center;
     border-bottom: 1px solid green;
-    padding: 20px;
+    padding: 30px;
 }
 
 .profilePage-container header .left-section {
@@ -51,17 +52,16 @@
 .userPosts {
     display: flex;
     justify-content: center;
-    
 }
 /* ------------------------------- */
 
 .userPosts .post-grid-container {
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 25px;
+    margin-bottom: 20px;
     width: 80%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 5px;
+    grid-gap: 15px;
 }
 
 .each-post-container {
